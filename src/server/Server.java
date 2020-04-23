@@ -34,14 +34,16 @@ public class Server {
             salida.writeUTF("Introduzca su nombre:");
 
             String nombre=(entrada.readUTF());
+            System.out.println("El nombre del cliente es: "+nombre);
             salida.writeUTF("¿Cúantas tareas desea realizar?");
 
             int numTareas=entrada.read();
+            System.out.println("Desea realizar "+ numTareas+" tareas.");
             Tarea [] tareas=new Tarea[numTareas];
 
 
-            System.out.println("El nombre del cliente es: "+nombre);
-            System.out.println("Desea realizar "+ numTareas+" tareas.");
+
+
 
            for (int i=1;i<=numTareas;i++) {
 
